@@ -70,7 +70,7 @@
         </activity>
 
         <service
-            android:name=".RefreshRateTileService"
+            android:name=".refreshrate.RefreshRateTileService"
             android:icon="@drawable/ic_qs_refresh_rate"
             android:label="@string/refresh_rate_tile_title"
             android:exported="true"
