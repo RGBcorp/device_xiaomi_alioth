@@ -68,11 +68,11 @@ void load_redmi_k40() {
 
 void load_poco_f3() {
     property_override("ro.boot.product.hardware.sku", "nfc");
-    property_override("ro.product.model", "M2012K11AG");
+    property_override("ro.product.model", "Poco F3");
     property_override("ro.product.brand", "POCO");
     property_override("ro.product.vendor.manufacturer", "Xiaomi");
     property_override("ro.product.vendor.brand", "POCO");
-    property_override("ro.product.vendor.model", "M2012K11AG");
+    property_override("ro.product.vendor.model", "Poco F3");
 }
 
 void load_xiaomi_mi11x() {
