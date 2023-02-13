@@ -43,7 +43,7 @@ ro.vendor.qti.va_aosp.support=1
 
 # SkiaGL Threaded
 debug.renderengine.backend=skiaglthreaded
-debug.hwui.renderer=skiagl
+debug.hwui.renderer=skiavk
 renderthread.skia.reduceopstasksplitting=true 
 
 # IMS
