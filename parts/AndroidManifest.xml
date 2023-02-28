@@ -50,7 +50,8 @@
         <activity
             android:name=".thermal.ThermalActivity"
             android:label="@string/thermal_title"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.SubSettingsBase_v31">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -69,7 +70,7 @@
         </activity>
 
         <service
-            android:name=".RefreshRateTileService"
+            android:name=".refreshrate.RefreshRateTileService"
             android:icon="@drawable/ic_qs_refresh_rate"
             android:label="@string/refresh_rate_tile_title"
             android:exported="true"
@@ -83,7 +84,7 @@
             android:name=".refreshrate.RefreshActivity"
             android:label="@string/refresh_title"
             android:exported="true"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:theme="@style/Theme.SubSettingsBase_v31">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -93,6 +94,16 @@
             <meta-data
                 android:name="com.android.settings.summary"
                 android:resource="@string/refresh_summary" />
+        </activity>
+
+        <activity
+            android:name=".TileEntryActivity"
+            android:exported="true"
+            android:label="@string/device_settings_app_name"
+            android:theme="@style/Theme.SubSettingsBase">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
+            </intent-filter>
         </activity>
 
         <service
@@ -118,7 +129,7 @@
         
         <activity
             android:name=".hbm.HBMActivity"
-            android:label="@string/hbm_fragment_title"
+            android:label="@string/hbm_title"
             android:exported="false"
             android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>

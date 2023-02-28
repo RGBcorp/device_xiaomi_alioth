@@ -1,7 +1,7 @@
 # Audio
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
-aaudio.mmap_policy=2
+aaudio.mmap_policy=1
 audio.offload.buffer.size.kb=32
 audio.offload.gapless.enabled=true
 persist.audio.button_jack.profile=volume
@@ -40,6 +40,12 @@ ro.vendor.audio.us.proximity=true
 ro.vendor.audio.vocal.support=true
 ro.vendor.audio.voice.change.support=true
 ro.vendor.audio.voice.change.youme.support=true
+ro.audio.usb.period_us=20375
+af.resampler.quality=7
+ro.audio.resampler.psd.stopband=132
+ro.audio.resampler.psd.halflength=960
+ro.audio.resampler.psd.cutoff_percent=98
+ro.audio.resampler.psd.tbwcheat=0
 tunnel.audio.encode=true
 vendor.audio.adm.buffering.ms=2
 vendor.audio.capture.enforce_legacy_copp_sr=true
@@ -153,6 +159,7 @@ persist.vendor.qcom.bluetooth.scram.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=hastings
+persist.bluetooth.sbc_hd_higher_bitrate=1
 vendor.hw.fm.init=0
 
 # Camera
@@ -194,6 +201,7 @@ ro.surface_flinger.use_color_management=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 ro.vendor.display.paneltype=2
 vendor.display.defer_fps_frame_count=2
+debug.sf.enable_egl_image_tracker=1
 
 # Display Refresh Rate
 ro.surface_flinger.set_idle_timer_ms?=4000
@@ -292,7 +300,7 @@ persist.vendor.radio.mbn_cdma=/vendor/firmware_mnt/image/modem_pr/mcfg/configs/m
 persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.sib16_support=1
-persist.vendor.radio.add_power_save=1
+persist.vendor.radio.add_power_save=0
 rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 ro.telephony.default_network=33,33
 
@@ -312,6 +320,9 @@ persist.vendor.sensors.sync_request=true
 
 # Shutdown
 sys.vendor.shutdown.waittime=500
+
+# Subsystem silent restart
+persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # Thermal data path
 vendor.sys.thermal.data.path=/data/vendor/thermal/
